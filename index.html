@@ -533,6 +533,23 @@
   }
 
   /* ---------- Warum-Liste als nummerierte flache Zeilen ---------- */
+  .warum-intro-grid{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+  .warum-photo{
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .warum-photo img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 880px){
+    .warum-intro-grid{ grid-template-columns: 1fr; gap: 32px; }
+  }
+
   .why-list{ border-bottom: 1px solid var(--line); margin-top: 8px; }
   .why-list li{
     display: grid;
@@ -1179,10 +1196,15 @@
   <!-- ============ WARUM NADEL & ZWIRN ============ -->
   <section class="section alt" id="warum">
     <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Warum Nadel &amp; Zwirn</span>
-        <h2>Handwerk statt Massenware</h2>
-        <p>Vier Grundsätze, an denen sich jeder Auftrag orientiert, unabhängig von Größe oder Stückzahl. Nadel &amp; Zwirn e.U. ist ein Ein-Personen-Betrieb von Raphael Gritsch: kein Team, keine Zwischenhändler, sondern direkter Kontakt zwischen Gründer und Kunde.</p>
+      <div class="warum-intro-grid">
+        <div class="section-head reveal" style="margin-bottom: 0;">
+          <span class="eyebrow">Warum Nadel &amp; Zwirn</span>
+          <h2>Handwerk statt Massenware</h2>
+          <p>Vier Grundsätze, an denen sich jeder Auftrag orientiert, unabhängig von Größe oder Stückzahl. Nadel &amp; Zwirn e.U. ist ein Ein-Personen-Betrieb von Raphael Gritsch: kein Team, keine Zwischenhändler, sondern direkter Kontakt zwischen Gründer und Kunde.</p>
+        </div>
+        <div class="warum-photo reveal">
+          <img src="stickmaschine_bottom_left.png" alt="Stickmaschinen-Nadeln sticken roten Faden in dunklen Stoff, Happy V2 bei der Arbeit" style="object-position: 30% 70%;">
+        </div>
       </div>
 
       <ul class="why-list">
