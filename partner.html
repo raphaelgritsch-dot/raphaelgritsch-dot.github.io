@@ -540,6 +540,23 @@
     .stst-photo-row{ grid-template-columns: 1fr; }
   }
 
+  .warum-intro-grid{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+  .warum-photo{
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+  .warum-photo img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+  @media (max-width: 880px){
+    .warum-intro-grid{ grid-template-columns: 1fr; gap: 32px; }
+  }
+
   .why-list{ border-bottom: 1px solid var(--line); }
   .why-list li{
     display: grid;
@@ -1084,10 +1101,15 @@
   <!-- ============ ÜBER GALVI ============ -->
   <section class="section alt" id="galvi">
     <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Über GALVI</span>
-        <h2>Der Textildruck-Partner hinter den Kulissen</h2>
-        <p>GALVI Promotion Products ist ein Textildruck-Betrieb mit Sitz in Villach, Kärnten, seit 1994 aktiv (Eigenwerbung: "30 Jahre" Erfahrung). Kerngeschäft: individueller Textildruck, Firmen- und Arbeitskleidung, Werbeartikel sowie Grafik- und Design-Beratung — die Basis, auf der Nadel &amp; Zwirn bei Bedarf aufbauen kann.</p>
+      <div class="warum-intro-grid">
+        <div class="section-head reveal" style="margin-bottom: 0;">
+          <span class="eyebrow">Über GALVI</span>
+          <h2>Der Textildruck-Partner hinter den Kulissen</h2>
+          <p>GALVI Promotion Products ist ein Textildruck-Betrieb mit Sitz in Villach, Kärnten, seit 1994 aktiv (Eigenwerbung: "30 Jahre" Erfahrung). Kerngeschäft: individueller Textildruck, Firmen- und Arbeitskleidung, Werbeartikel sowie Grafik- und Design-Beratung — die Basis, auf der Nadel &amp; Zwirn bei Bedarf aufbauen kann.</p>
+        </div>
+        <div class="warum-photo reveal">
+          <img src="hero-section-image.jpg" alt="GOTS-Zertifizierungs-Anhänger an einem bedruckten T-Shirt von GALVI">
+        </div>
       </div>
 
       <p>Zum Leistungsspektrum gehört auch Merchandising-Druck on Demand, inklusive einer Myze-Integration für automatisierte On-Demand-Produktion für Online-Shops. Eines der eingesetzten Druckveredelungsverfahren ist Digitaldruck (DTG) — laut GALVI selbst "flexibel für Einzelstücke und kleine Mengen", also auch für kleinere Auflagen geeignet statt nur für Großaufträge.</p>
